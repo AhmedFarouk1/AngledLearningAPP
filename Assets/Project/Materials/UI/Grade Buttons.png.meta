@@ -1,0 +1,425 @@
+fileFormatVersion: 2
+guid: 72610a4c392765a4e8e08a24a75453eb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9136382841520766541
+    second: Grade Buttons_0
+  - first:
+      213: 892997235667198948
+    second: Grade Buttons_1
+  - first:
+      213: -781156554863290120
+    second: Grade Buttons_2
+  - first:
+      213: -5854812792981057691
+    second: Grade Buttons_0
+  - first:
+      213: -1637282443768133700
+    second: Grade Buttons_1
+  - first:
+      213: 6927349868202187953
+    second: Grade Buttons_2
+  - first:
+      213: 2752782737421278784
+    second: Grade Buttons_3
+  - first:
+      213: 1325575913849687502
+    second: Grade Buttons_4
+  - first:
+      213: -2675221966956570942
+    second: Grade Buttons_5
+  - first:
+      213: 2117706790778130944
+    second: Grade Buttons_6
+  - first:
+      213: -5881535353961200132
+    second: Grade Buttons_7
+  - first:
+      213: 6589094355821694039
+    second: Grade Buttons_8
+  - first:
+      213: 9136235534989698485
+    second: Grade Buttons_9
+  - first:
+      213: 390470469531179810
+    second: Grade Buttons_10
+  - first:
+      213: 4129796316813921708
+    second: Grade Buttons_11
+  - first:
+      213: 2684165817597734340
+    second: Grade Buttons_12
+  - first:
+      213: -548524423011356887
+    second: Grade Buttons_13
+  - first:
+      213: 2811653618729457196
+    second: Grade Buttons_14
+  - first:
+      213: 3106437067140677497
+    second: Grade Buttons_15
+  - first:
+      213: 805645470288808513
+    second: Grade Buttons_16
+  - first:
+      213: 5928080169989830669
+    second: Grade Buttons_17
+  - first:
+      213: 5559431919569337388
+    second: Grade Buttons_18
+  - first:
+      213: -3185893348092653755
+    second: Grade Buttons_19
+  - first:
+      213: -7641327260725060209
+    second: Grade Buttons_20
+  - first:
+      213: 35319108440902703
+    second: Grade Buttons_21
+  - first:
+      213: -429065027726393556
+    second: Grade Buttons_22
+  - first:
+      213: 7300580323690053227
+    second: Grade Buttons_23
+  - first:
+      213: 3717794155586207608
+    second: Grade Buttons_24
+  - first:
+      213: -936728923239483764
+    second: Grade Buttons_25
+  - first:
+      213: 979234979771134714
+    second: Grade Buttons_26
+  - first:
+      213: -3247990113479485237
+    second: Grade Buttons_27
+  - first:
+      213: 1202255100661535140
+    second: Grade Buttons_28
+  - first:
+      213: -3218344983361325418
+    second: Grade Buttons_29
+  - first:
+      213: 1950566320915465825
+    second: Grade Buttons_30
+  - first:
+      213: -9045327866378525272
+    second: Grade Buttons_31
+  - first:
+      213: 8587307183055624128
+    second: Grade Buttons_32
+  - first:
+      213: -2392035629000658846
+    second: Grade Buttons_33
+  - first:
+      213: -3258328511217038610
+    second: Grade Buttons_34
+  - first:
+      213: -5245128239310522057
+    second: Grade Buttons_35
+  - first:
+      213: 1123997886770944363
+    second: Grade Buttons_36
+  - first:
+      213: -8380050583420238791
+    second: Grade Buttons_37
+  - first:
+      213: 6539139362718895093
+    second: Grade Buttons_38
+  - first:
+      213: 2516142397980770829
+    second: Grade Buttons_39
+  - first:
+      213: 2510215632748844883
+    second: Grade Buttons_40
+  - first:
+      213: -7472070535508925455
+    second: Grade Buttons_41
+  - first:
+      213: -7662773954512200152
+    second: Grade Buttons_42
+  - first:
+      213: 5448428822625031752
+    second: Grade Buttons_43
+  - first:
+      213: -7124867609850174466
+    second: Grade Buttons_44
+  - first:
+      213: -6195600390612398878
+    second: Grade Buttons_45
+  - first:
+      213: -8458700187589053783
+    second: Grade Buttons_46
+  - first:
+      213: 6717808391838571749
+    second: Grade Buttons_47
+  - first:
+      213: 806949714133102907
+    second: Grade Buttons_48
+  - first:
+      213: -7624985223108865392
+    second: Grade Buttons_49
+  - first:
+      213: -1825803873589658101
+    second: Grade Buttons_50
+  - first:
+      213: -2267654634247782018
+    second: Grade Buttons_51
+  - first:
+      213: -1195678381771343664
+    second: Grade Buttons_52
+  - first:
+      213: -6059169063325534504
+    second: Grade Buttons_53
+  - first:
+      213: 873987760529879040
+    second: Grade Buttons_54
+  - first:
+      213: -7460023944833196416
+    second: Grade Buttons_55
+  - first:
+      213: -1474308418426594365
+    second: Grade Buttons_56
+  - first:
+      213: -4490928672349049558
+    second: Grade Buttons_57
+  - first:
+      213: -2430046335634632382
+    second: Grade Buttons_58
+  - first:
+      213: 5765687063947704118
+    second: Grade Buttons_59
+  - first:
+      213: 4094651310839303073
+    second: Grade Buttons_60
+  - first:
+      213: 255084965160150519
+    second: Grade Buttons_61
+  - first:
+      213: -12907521187637349
+    second: Grade Buttons_62
+  - first:
+      213: 8292258832681457279
+    second: Grade Buttons_63
+  - first:
+      213: 6145124386980478968
+    second: Grade Buttons_64
+  - first:
+      213: 7191228184826423855
+    second: Grade Buttons_65
+  - first:
+      213: 2630185080361022614
+    second: Grade Buttons_66
+  - first:
+      213: -5977092278673846276
+    second: Grade Buttons_67
+  - first:
+      213: 6280222377511328213
+    second: Grade Buttons_68
+  - first:
+      213: -3270494291479029883
+    second: Grade Buttons_69
+  - first:
+      213: 4953740761398398544
+    second: Grade Buttons_70
+  - first:
+      213: -8227618047244879112
+    second: Grade Buttons_71
+  - first:
+      213: -2371210269261868618
+    second: Grade Buttons_72
+  - first:
+      213: -7732878286309124475
+    second: Grade Buttons_73
+  - first:
+      213: -3032215537717250220
+    second: Grade Buttons_74
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Grade Buttons_0
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 352
+        width: 260
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f83ffe8c68fbea0800000000000000
+      internalID: -5854812792981057691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grade Buttons_1
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 354
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb78736ca443749e0800000000000000
+      internalID: -1637282443768133700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grade Buttons_2
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 357
+        width: 260
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc5a01a004e22060800000000000000
+      internalID: 6927349868202187953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
