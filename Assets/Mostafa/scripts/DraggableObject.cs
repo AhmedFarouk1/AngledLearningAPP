@@ -13,14 +13,9 @@ public class DraggableObject : MonoBehaviour
         originalPosition = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void OnRelease()
     {
         transform.position = originalPosition;
+       
     }
 }
