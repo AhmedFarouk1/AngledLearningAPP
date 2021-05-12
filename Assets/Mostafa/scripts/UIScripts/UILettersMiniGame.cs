@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UILettersMiniGame : MonoBehaviour
 {
@@ -50,7 +51,7 @@ public class UILettersMiniGame : MonoBehaviour
             Vector2 tmpPosition = rectTransform.position;
             tmpPosition.x += horiziontalSpacing * word.Length;
             GameObject tmpLetterGO = Instantiate(letterPrefab, transform);
-            tmpLetterGO.GetComponent<DraggableObjectUI>().objectText = randomizedWord[i].ToString();
+            tmpLetterGO.GetComponent<UILetter>().AssignLetter(randomizedWord[i].ToString());
             tmpPosition.y += i * verticalSpacing;
             tmpLetterGO.transform.position = tmpPosition;
 
