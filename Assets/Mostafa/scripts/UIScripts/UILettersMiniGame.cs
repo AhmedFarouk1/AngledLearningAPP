@@ -9,6 +9,8 @@ public class UILettersMiniGame : MonoBehaviour
     public GameObject letterPrefab;
     public GameObject letterContainerPrefab;
 
+    public RectTransform lettersStartPosition;
+
     public float horiziontalSpacing;
     public float verticalSpacing;
 
@@ -48,11 +50,11 @@ public class UILettersMiniGame : MonoBehaviour
 
         for (int i = 0; i < randomizedWord.Length; i++)
         {
-            Vector2 tmpPosition = rectTransform.position;
-            tmpPosition.x += horiziontalSpacing * word.Length;
+            Vector2 tmpPosition = lettersStartPosition.position;
+            //tmpPosition.x += horiziontalSpacing * word.Length;
             GameObject tmpLetterGO = Instantiate(letterPrefab, transform);
             tmpLetterGO.GetComponent<UILetter>().AssignLetter(randomizedWord[i].ToString());
-            tmpPosition.y += i * verticalSpacing;
+            tmpPosition.y -= i * verticalSpacing;
             tmpLetterGO.transform.position = tmpPosition;
 
         }
