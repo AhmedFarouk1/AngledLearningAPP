@@ -9,6 +9,8 @@ public class UIDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEn
     public Canvas canvas;
     public UnityEvent onRelease;
 
+    public float scaleFactor;
+
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
@@ -38,6 +40,7 @@ public class UIDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEn
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        rectTransform.localScale *= scaleFactor;
         Debug.Log("on pointer down");
     }
 
