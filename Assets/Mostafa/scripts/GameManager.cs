@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager _instance;
+    public Monkey monkey;
+    public UILettersMiniGame lettersMiniGame;
 
     void Awake()
     {
@@ -21,4 +23,13 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public void MonkeyJump()
+    {
+        monkey.Jump();
+    }
+
+    public void ShowLetterMiniGame()
+    {
+        lettersMiniGame.gameObject.SetActive(true);
+    }
 }
