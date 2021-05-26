@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class DraggableObjectUI : MonoBehaviour
 {
@@ -21,5 +22,10 @@ public class DraggableObjectUI : MonoBehaviour
     {
         rectTransform.anchoredPosition = originalPosition;
         rectTransform.localScale = originalScale;
+    }
+
+    public void GoToOriginalPos()
+    {
+        GetComponent<RectTransform>().DOMove(originalPosition, 0.5f);
     }
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager _instance;
     public Monkey monkey;
     public UILettersMiniGame lettersMiniGame;
 
+    public static GameManager _instance;
     void Awake()
     {
 
@@ -19,8 +19,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        DontDestroyOnLoad(this.gameObject);
     }
 
     public void MonkeyJump()
