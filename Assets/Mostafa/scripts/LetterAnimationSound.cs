@@ -1,0 +1,74 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using DG.Tweening;
+using UnityEngine.Events;
+
+public class LetterAnimationSound : MonoBehaviour
+{
+    public string word;
+    public float horiziontalSpacing;
+    public float tween_duration;
+    public GameObject letterPrefab;
+
+    public UnityEvent onFinishAnimation;
+
+    private List<GameObject> instantiated_letters;
+
+    public RectTransform y_destination;
+    
+    RectTransform rectTransform;
+    // Start is called before the first frame update
+    void Start()
+    {
+        instantiated_letters = new List<GameObject>();
+        rectTransform = GetComponent<RectTransform>();
+    }
+
+    [ContextMenu("generate word")]
+    public void GenerateWord()
+    {
+        current_tween_index = 0;
+        foreach(var i in instantiated_letters)
+        {
+            Destroy(i);
+        }
+        instantiated_letters = new List<GameObject>();
+        for (int i = 0; i < word.Length; i++)
+        {
+            Vector2 tmpPosition = rectTransform.position;
+            GameObject tmpLetterGO = Instantiate(letterPrefab, rectTransform);
+            instantiated_letters.Add(tmpLetterGO);
+            tmpLetterGO.GetComponent<UILetter>().AssignLetter(word[i].ToString());
+            tmpPosition.x += i * horiziontalSpacing;
+            tmpLetterGO.transform.position = tmpPosition;
+        }
+    }
+
+
+
+    /*
+     * move letters to destination transform
+     */
+    private int current_tween_index;
+    [ContextMenu("tween_letters")]
+    public void TweenLetters()
+    {
+        if(current_tween_index < word.Length)
+        {
+            Vector2 tmpPos;
+            tmpPos.y = y_destination.position.y;
+            tmpPos.x = instantiated_letters[current_tween_index].GetComponent<RectTransform>().position.x;
+
+            instantiated_letters[current_tween_index].GetComponent<RectTransform>().DOMove(tmpPos, tween_duration).OnComplete(TweenLetters);
+            current_tween_index++;
+            return;
+        }
+        current_tween_index = 0;
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
