@@ -30,13 +30,18 @@ public class Stage1 : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        LetterAnimationSound._instance.word = "INSIDE";
+        LetterAnimationSound._instance.GenerateWord();
+    }
 
     [ContextMenu("tweenFruit")]
     public void MoveFruitToPlate()
     {
         if(currentFruitIndex < fruitTransforms.Length){
             //move fruit to plates here is temporary jsut for testing
-            fruitTransforms[currentFruitIndex].DOMove(plate.fruitPositions[currentFruitIndex].position, tweenDuration).OnComplete(MoveFruitToPlate);
+            fruitTransforms[currentFruitIndex].DOMove(plate.fruitPositions[currentFruitIndex].position, tweenDuration).OnComplete(LetterAnimationSound._instance.TweenLetters);//start tweening letter of the word INSIDE
             currentFruitIndex++;
         }
     }    

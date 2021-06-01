@@ -16,7 +16,23 @@ public class LetterAnimationSound : MonoBehaviour
     private List<GameObject> instantiated_letters;
 
     public RectTransform y_destination;
-    
+
+    public static LetterAnimationSound _instance;
+    void Awake()
+    {
+
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
+
     RectTransform rectTransform;
     // Start is called before the first frame update
     void Start()
@@ -65,6 +81,8 @@ public class LetterAnimationSound : MonoBehaviour
             return;
         }
         current_tween_index = 0;
+        onFinishAnimation.Invoke();
+        GenerateWord();
     }
     // Update is called once per frame
     void Update()
