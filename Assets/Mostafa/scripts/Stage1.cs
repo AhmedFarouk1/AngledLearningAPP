@@ -41,8 +41,22 @@ public class Stage1 : MonoBehaviour
     {
         if(currentFruitIndex < fruitTransforms.Length){
             //move fruit to plates here is temporary jsut for testing
-            fruitTransforms[currentFruitIndex].DOMove(plate.fruitPositions[currentFruitIndex].position, tweenDuration).OnComplete(LetterAnimationSound._instance.TweenLetters);//start tweening letter of the word INSIDE
-            currentFruitIndex++;
+            fruitTransforms[currentFruitIndex].DOMove(plate.fruitPositions[currentFruitIndex].position, tweenDuration).OnComplete(StartTweeningLetters);//start tweening letter of the word INSIDE
         }
-    }    
+    }
+
+    //tween letters after sound has finished playing
+    private void StartTweeningLetters()
+    {
+        //display text
+        fruitTransforms[currentFruitIndex].GetComponent<AudioSource>().Play();
+        StartCoroutine(WaitForSound());
+    }
+    public IEnumerator WaitForSound()
+    {
+        yield return new WaitUntil(() => fruitTransforms[currentFruitIndex].GetComponent<AudioSource>().isPlaying == false);
+        // or yield return new WaitWhile(() => audiosource.isPlaying == true);
+        LetterAnimationSound._instance.TweenLetters();
+        currentFruitIndex++;
+    }
 }
