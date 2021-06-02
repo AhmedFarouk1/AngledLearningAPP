@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Events;
+using UnityEngine.Audio;
 
 public class LetterAnimationSound : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class LetterAnimationSound : MonoBehaviour
     private List<GameObject> instantiated_letters;
 
     public RectTransform y_destination;
+
+    public AudioSource Inside_Split;
+    public AudioSource Outside_Split;
+
 
     public static LetterAnimationSound _instance;
     void Awake()
@@ -84,9 +89,9 @@ public class LetterAnimationSound : MonoBehaviour
         onFinishAnimation.Invoke();
         GenerateWord();
     }
-    // Update is called once per frame
-    void Update()
+
+    public void PlaySoundSplitInside()
     {
-        
+        Inside_Split.Play();
     }
 }

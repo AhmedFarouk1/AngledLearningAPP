@@ -57,6 +57,7 @@ public class Stage1 : MonoBehaviour
         yield return new WaitUntil(() => fruitTransforms[currentFruitIndex].GetComponent<AudioSource>().isPlaying == false);
         // or yield return new WaitWhile(() => audiosource.isPlaying == true);
         LetterAnimationSound._instance.TweenLetters();
+        LetterAnimationSound._instance.PlaySoundSplitInside();
         currentFruitIndex++;
     }
 }
