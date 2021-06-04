@@ -55,8 +55,7 @@ public class UILettersMiniGame : MonoBehaviour
             GameObject tmpLetterGO = Instantiate(letterPrefab, transform);
             tmpLetterGO.GetComponent<UILetter>().AssignLetter(randomizedWord[i].ToString());
             tmpPosition.y -= i * verticalSpacing;
-            tmpLetterGO.transform.position = tmpPosition;
-
+            tmpLetterGO.GetComponent<RectTransform>().position = tmpPosition;
         }
 
     }

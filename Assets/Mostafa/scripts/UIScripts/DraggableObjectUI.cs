@@ -14,13 +14,13 @@ public class DraggableObjectUI : MonoBehaviour
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-        originalPosition = rectTransform.anchoredPosition;
+        originalPosition = rectTransform.position;
         originalScale = rectTransform.localScale;
     }
 
     public void OnRelease()
     {
-        rectTransform.anchoredPosition = originalPosition;
+        rectTransform.position = originalPosition;
         rectTransform.localScale = originalScale;
     }
 

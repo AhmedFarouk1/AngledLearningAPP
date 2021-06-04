@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     public void MonkeyJump()
     {
+        monkey.doneJumping = false;
         monkey.Jump();
     }
 
@@ -30,4 +31,5 @@ public class GameManager : MonoBehaviour
     {
         lettersMiniGame.gameObject.SetActive(true);
     }
+    
 }
