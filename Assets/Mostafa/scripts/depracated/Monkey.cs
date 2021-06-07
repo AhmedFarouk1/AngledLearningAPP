@@ -39,10 +39,21 @@ public class Monkey : MonoBehaviour
 
     }
 
-    public void disableJumpAnimation()
+    public void Joy()
+    {
+            animator.SetBool("joy", true);
+    }
+
+    public void stage2Speak()
+    {
+        Stage2._instance.Speak();
+    }
+
+    public void disableAnimationParameters()
     {
         animator.SetBool("gotochair", false);
         animator.SetBool("jump", false);
+        animator.SetBool("joy", false);
 
     }
 
@@ -51,5 +62,6 @@ public class Monkey : MonoBehaviour
         Vector2 tmpScale = rectTransform.localScale;
         tmpScale.x *= -1;
         rectTransform.localScale = tmpScale;
+        Stage2._instance.Speak();
     }
 }

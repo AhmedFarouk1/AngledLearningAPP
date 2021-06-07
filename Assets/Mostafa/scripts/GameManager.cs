@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowLetterMiniGame()
     {
+        Stage2._instance.TweenFruitsBackToTable();
         lettersMiniGame.gameObject.SetActive(true);
     }
     

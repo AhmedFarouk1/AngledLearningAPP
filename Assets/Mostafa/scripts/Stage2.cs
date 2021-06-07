@@ -20,10 +20,10 @@ public class Stage2 : MonoBehaviour
     public Button button_stage_3;
 
     public float tweenDuration;
-
+     
     private int currentFruitIndex = 0;
-
-    bool locked = false; // if true locks all actions related to stage 1
+    
+    bool locked = false; // if true locks actions related to stage 2
 
     public string[] WordsToBeAssignedToPlate;
     private int WordTobeAssignedIndex = 0;
@@ -61,20 +61,22 @@ public class Stage2 : MonoBehaviour
 
     public void TweenFruitsBackToTable()
     {
-        for(int i = 0; i < fruitTransforms.Length; i++)
+        for (int i = 0; i < fruitTransforms.Length; i++)
         {
             fruitTransforms[i].GetComponent<DraggableObjectUI>().originalPosition = initialFruitTransforms[i].position;
             fruitTransforms[i].DOMove(initialFruitTransforms[i].position, tweenDuration);
         }
+
     }
 
     public void FruitDraggedToPlateCallback()
     {
-        if(WordTobeAssignedIndex < WordsToBeAssignedToPlate.Length)
+        SpeechManager._instance.DisableAllSpeech();
+        monkey.Joy();
+        if (WordTobeAssignedIndex < WordsToBeAssignedToPlate.Length)
         {
             plate.word = WordsToBeAssignedToPlate[WordTobeAssignedIndex];
             WordTobeAssignedIndex++;
-            //make monkey talk
         }
         else
         {
@@ -82,8 +84,16 @@ public class Stage2 : MonoBehaviour
         }
     }
 
+    public void Speak()
+    {
+        if(!locked)
+            SpeechManager._instance.ChangeSpeechBubble("put the " + plate.word + " INSIDE the bowl");
+    }
     public void Stage2Finish()
     {
+        locked = true;
+        SpeechManager._instance.DisableAllSpeech();
         button_stage_3.gameObject.SetActive(true);
     }
 }
+
