@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class UIletterContainer : MonoBehaviour, IDropHandler
 {
     public string letter;//the letter that we will compare against
+    public UILettersMiniGame uILettersMiniGame;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -16,6 +17,7 @@ public class UIletterContainer : MonoBehaviour, IDropHandler
             if (dragableObjectUI.objectText == letter){  
                 dragableObjectUI.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
                 dragableObjectUI.GetComponent<UIDrag>().enabled = false;//stop dragging the object if it's the correct letter
+                uILettersMiniGame.onCatchLetter(letter);
             }
         }
     }

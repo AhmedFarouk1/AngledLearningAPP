@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UILettersMiniGame : MonoBehaviour
 {
     public string word;
+    private string collected_word = "";
     public GameObject letterPrefab;
     public GameObject letterContainerPrefab;
 
@@ -15,9 +16,10 @@ public class UILettersMiniGame : MonoBehaviour
     public float verticalSpacing;
 
     private RectTransform rectTransform;
-    // Start is called before the first frame update
-    void Start()
+    [ContextMenu("prepare")]
+    public void Prepare()
     {
+        collected_word = "";
         rectTransform = GetComponent<RectTransform>();
         //generate containers
         for (int i = 0; i < word.Length; i++)
@@ -27,6 +29,7 @@ public class UILettersMiniGame : MonoBehaviour
             tmpLetterContainerGO.GetComponent<UIletterContainer>().letter = word[i].ToString();
             tmpPosition.x += i * horiziontalSpacing;
             tmpLetterContainerGO.transform.position = tmpPosition;
+            tmpLetterContainerGO.GetComponent<UIletterContainer>().uILettersMiniGame = GetComponent<UILettersMiniGame>();
         }
 
         //generate letters
@@ -58,5 +61,16 @@ public class UILettersMiniGame : MonoBehaviour
             tmpLetterGO.GetComponent<RectTransform>().position = tmpPosition;
         }
 
+    }
+
+    public void onCatchLetter(string ch)
+    {
+        collected_word += ch;
+
+        if(collected_word == word)
+        {
+            Debug.Log("done");
+            Stage3._instance.wordCompleted();
+        }
     }
 }

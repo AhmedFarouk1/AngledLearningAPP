@@ -41,7 +41,8 @@ public class Monkey : MonoBehaviour
 
     public void Joy()
     {
-            animator.SetBool("joy", true);
+        GetComponent<AudioSource>().Play();
+        animator.SetBool("joy", true);
     }
 
     public void stage2Speak()
