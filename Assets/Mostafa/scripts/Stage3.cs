@@ -62,10 +62,9 @@ public class Stage3 : MonoBehaviour
             fruitTransforms[currentFruitIndex].DOMove(plate.fruitPositions[currentFruitIndex].position, tweenDuration).OnComplete(restart);//start tweening letter of the word INSIDE
             currentFruitIndex++;
         }
-        else
-        {
-            Stage3Finish();
-        }
+
+        
+       
 
     }
 
@@ -83,6 +82,10 @@ public class Stage3 : MonoBehaviour
             monkey.GetComponent<RectTransform>().DOMove(monkeyChairPosition.position, tweenDuration).OnComplete(monkey.FlipMonkey);
             lettersMiniGame.Prepare();
         }
+        else
+        {
+            Stage3Finish();
+        }
     }
 
     public void Stage3Finish()
@@ -90,5 +93,7 @@ public class Stage3 : MonoBehaviour
         if (locked) return;
         locked = true;
 
+        SpeechManager._instance.ChangeSubtitle("Congratulations!!! you've learned INSIDE!");
+        GetComponent<AudioSource>().Play();
     }
 }
