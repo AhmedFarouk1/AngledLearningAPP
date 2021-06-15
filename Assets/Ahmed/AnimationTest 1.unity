@@ -2084,7 +2084,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: b6b63e052d39954428d88f6be0141a7f, type: 3}
+      objectReference: {fileID: 8300000, guid: b0ee85acfba260e41b53a87ed4a3248d, type: 3}
     - target: {fileID: 976461190740300744, guid: b386e6648fe57ed4bad6b6811f2bad45,
         type: 3}
       propertyPath: m_PlayOnAwake
@@ -2094,7 +2094,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: bcb8de65fbfe7424b83deb782f28ee2d,
+      objectReference: {fileID: 21300000, guid: c252b65feadd3b143b004bd982e0bb3b,
         type: 3}
     - target: {fileID: 6287037112241732554, guid: b386e6648fe57ed4bad6b6811f2bad45,
         type: 3}
@@ -2114,7 +2114,7 @@ PrefabInstance:
     - target: {fileID: 6287037112241732564, guid: b386e6648fe57ed4bad6b6811f2bad45,
         type: 3}
       propertyPath: objectText
-      value: peach
+      value: Banana
       objectReference: {fileID: 0}
     - target: {fileID: 6287037112241732565, guid: b386e6648fe57ed4bad6b6811f2bad45,
         type: 3}
