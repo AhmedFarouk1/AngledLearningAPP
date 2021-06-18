@@ -791,7 +791,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22, y: -15}
+  m_AnchoredPosition: {x: -50, y: -15}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &239627083
@@ -1155,7 +1155,7 @@ PrefabInstance:
     - target: {fileID: 6287037112241732564, guid: b386e6648fe57ed4bad6b6811f2bad45,
         type: 3}
       propertyPath: objectText
-      value: apple
+      value: Apple
       objectReference: {fileID: 0}
     - target: {fileID: 6287037112241732565, guid: b386e6648fe57ed4bad6b6811f2bad45,
         type: 3}
@@ -3141,7 +3141,7 @@ PrefabInstance:
     - target: {fileID: 6287037112241732564, guid: b386e6648fe57ed4bad6b6811f2bad45,
         type: 3}
       propertyPath: objectText
-      value: mango
+      value: Mango
       objectReference: {fileID: 0}
     - target: {fileID: 6287037112241732565, guid: b386e6648fe57ed4bad6b6811f2bad45,
         type: 3}

@@ -74,7 +74,7 @@ public class Stage1 : MonoBehaviour
         if (locked) return;
         //display text
         fruitTransforms[currentFruitIndex].GetComponent<AudioSource>().Play();
-        SpeechManager._instance.ChangeSubtitle("the " + fruitTransforms[currentFruitIndex].GetComponent<DraggableObjectUI>().objectText + " is INSIDE the bowl");
+        SpeechManager._instance.ChangeSubtitle(fruitTransforms[currentFruitIndex].GetComponent<DraggableObjectUI>().objectText + " is INSIDE the bowl");
         StartCoroutine(WaitForSound());
     }
     public IEnumerator WaitForSound()
