@@ -9,6 +9,8 @@ public class Stage1 : MonoBehaviour
 
     public RectTransform[] fruitTransforms;
     public UIPlate plate;
+    public RectTransform MonkeyHand;
+
 
     public Monkey monkey;
 
@@ -59,6 +61,8 @@ public class Stage1 : MonoBehaviour
         if (currentFruitIndex < fruitTransforms.Length)
         {
             //move fruit to plates here is temporary jsut for testing
+            monkey.Inside();
+            Debug.Log("in");
             fruitTransforms[currentFruitIndex].DOMove(plate.fruitPositions[currentFruitIndex].position, tweenDuration).OnComplete(StartTweeningLetters);//start tweening letter of the word INSIDE
         }
         else

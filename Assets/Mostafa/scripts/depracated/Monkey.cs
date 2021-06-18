@@ -45,6 +45,11 @@ public class Monkey : MonoBehaviour
         animator.SetBool("joy", true);
     }
 
+    public void Inside()
+    {
+        animator.SetBool("inside", true);
+    }
+
     public void stage2Speak()
     {
         Stage2._instance.Speak();
@@ -52,8 +57,10 @@ public class Monkey : MonoBehaviour
 
     public void disableAnimationParameters()
     {
+        Debug.Log("disabled animation");    
         animator.SetBool("gotochair", false);
         animator.SetBool("jump", false);
+        animator.SetBool("inside", false);
         animator.SetBool("joy", false);
 
     }
