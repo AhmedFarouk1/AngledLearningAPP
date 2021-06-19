@@ -56,7 +56,7 @@ public class Stage3 : MonoBehaviour
     public void MoveFruitToPlate()
     {
         monkey.FlipMonkey();
-
+        monkey.Inside();
         if (currentFruitIndex < fruitTransforms.Length)
         {
             fruitTransforms[currentFruitIndex].DOMove(plate.fruitPositions[currentFruitIndex].position, tweenDuration).OnComplete(restart);//start tweening letter of the word INSIDE

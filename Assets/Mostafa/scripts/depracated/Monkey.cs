@@ -72,4 +72,5 @@ public class Monkey : MonoBehaviour
         rectTransform.localScale = tmpScale;
         Stage2._instance.Speak();
     }
+
 }

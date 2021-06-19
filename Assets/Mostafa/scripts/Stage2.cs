@@ -50,6 +50,11 @@ public class Stage2 : MonoBehaviour
         MonkeyChair();
         TweenFruitsBackToTable();
         WordTobeAssignedIndex++;
+
+        for(int i = 0; i < fruitTransforms.Length; i++)
+        {
+            fruitTransforms[i].GetComponent<Image>().raycastTarget = true;
+        }
         //make monkey talk
     }
 
@@ -94,6 +99,11 @@ public class Stage2 : MonoBehaviour
         locked = true;
         SpeechManager._instance.DisableAllSpeech();
         button_stage_3.gameObject.SetActive(true);
+
+        for (int i = 0; i < fruitTransforms.Length; i++)
+        {
+            fruitTransforms[i].GetComponent<Image>().raycastTarget= false;
+        }
     }
 }
 

@@ -32,6 +32,7 @@ public class UIPlate : MonoBehaviour, IDropHandler
                 {
                     Stage2._instance.FruitDraggedToPlateCallback();
                     dragableObjectUI.originalPosition = fruitPositions[currentIndex].position;
+                    dragableObjectUI.GetComponent<Image>().raycastTarget = false;
                     currentIndex++;
                 }
             }
