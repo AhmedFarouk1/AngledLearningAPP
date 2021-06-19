@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
-public class UIDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class UIDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerUpHandler
 {
     public Canvas canvas;
     public UnityEvent onRelease;
@@ -13,12 +13,14 @@ public class UIDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEn
 
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
+    private Vector2 originalScale;
 
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
         canvas = FindObjectOfType<Canvas>();
+        originalScale = rectTransform.localScale;
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -44,5 +46,8 @@ public class UIDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEn
         Debug.Log("on pointer down");
     }
 
-  
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        rectTransform.localScale = originalScale;
+    }
 }
