@@ -73,4 +73,8 @@ public class Monkey : MonoBehaviour
         Stage2._instance.Speak();
     }
 
+    public void playSwingSound()
+    {
+        LetterAudioManager._instance.monkeySwing();
+    }
 }

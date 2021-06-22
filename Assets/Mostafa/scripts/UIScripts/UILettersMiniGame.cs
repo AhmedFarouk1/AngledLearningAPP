@@ -66,7 +66,7 @@ public class UILettersMiniGame : MonoBehaviour
     public void onCatchLetter(string ch)
     {
         collected_word += ch;
-
+        LetterAudioManager._instance.playLetter(ch);
         if(collected_word == word)
         {
             Debug.Log("done");

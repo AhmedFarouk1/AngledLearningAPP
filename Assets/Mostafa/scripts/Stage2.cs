@@ -11,6 +11,8 @@ public class Stage2 : MonoBehaviour
 
     public RectTransform[] initialFruitTransforms;//go to those positions when button is clicked
 
+    public RectTransform finger;
+
     public UIPlate plate;
 
     public Monkey monkey;
@@ -45,6 +47,7 @@ public class Stage2 : MonoBehaviour
 
     public void OnStage2BtnClick()
     {
+        finger.gameObject.SetActive(true);
         button_stage_2.gameObject.SetActive(false);
         plate.word = WordsToBeAssignedToPlate[WordTobeAssignedIndex];
         MonkeyChair();
@@ -58,6 +61,24 @@ public class Stage2 : MonoBehaviour
         //make monkey talk
     }
 
+    public void MoveFinger()
+    {
+        //move finger to current fruit
+        Vector2 current_fruit_pos;
+
+        foreach (RectTransform fr in fruitTransforms)
+        {
+
+            if (fr.GetComponent<DraggableObjectUI>().objectText == plate.word)
+            {
+                Debug.Log("fingering");
+                current_fruit_pos = fr.position;
+                current_fruit_pos.y -= 10;
+                finger.position = current_fruit_pos;
+                break;
+            }
+        }
+    }
     public void MonkeyChair()
     {
         monkey.doneJumping = false;
@@ -69,7 +90,7 @@ public class Stage2 : MonoBehaviour
         for (int i = 0; i < fruitTransforms.Length; i++)
         {
             fruitTransforms[i].GetComponent<DraggableObjectUI>().originalPosition = initialFruitTransforms[i].position;
-            fruitTransforms[i].DOMove(initialFruitTransforms[i].position, tweenDuration);
+            fruitTransforms[i].DOMove(initialFruitTransforms[i].position, tweenDuration).OnComplete(MoveFinger);
         }
 
     }
@@ -82,6 +103,7 @@ public class Stage2 : MonoBehaviour
         {
             plate.word = WordsToBeAssignedToPlate[WordTobeAssignedIndex];
             WordTobeAssignedIndex++;
+            MoveFinger();
         }
         else
         {
@@ -91,15 +113,16 @@ public class Stage2 : MonoBehaviour
 
     public void Speak()
     {
-        if(!locked)
-            SpeechManager._instance.ChangeSpeechBubble("put the " + plate.word + " INSIDE the bowl");
+        if (locked) return;
+
+        SpeechManager._instance.ChangeSpeechBubble("put the " + plate.word + " INSIDE the bowl");
     }
     public void Stage2Finish()
     {
         locked = true;
         SpeechManager._instance.DisableAllSpeech();
         button_stage_3.gameObject.SetActive(true);
-
+        finger.gameObject.SetActive(false);
         for (int i = 0; i < fruitTransforms.Length; i++)
         {
             fruitTransforms[i].GetComponent<Image>().raycastTarget= false;

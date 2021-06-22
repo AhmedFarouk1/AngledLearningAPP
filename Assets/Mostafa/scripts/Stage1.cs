@@ -45,6 +45,8 @@ public class Stage1 : MonoBehaviour
 
     public void OnStage1BtnClick()
     {
+        LetterAudioManager._instance.audiosource.Stop() ;
+        LetterAudioManager._instance.audiosource.clip = null;
         button_stage_1.gameObject.SetActive(false);
         monkey.doneJumping = false;
         monkey.Jump();
