@@ -73,7 +73,7 @@ public class Stage2 : MonoBehaviour
             {
                 Debug.Log("fingering");
                 current_fruit_pos = fr.position;
-                current_fruit_pos.y -= 10;
+                current_fruit_pos.y -= 50;
                 finger.position = current_fruit_pos;
                 break;
             }

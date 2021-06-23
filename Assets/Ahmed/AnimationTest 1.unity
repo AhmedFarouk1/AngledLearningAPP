@@ -2307,7 +2307,7 @@ PrefabInstance:
     - target: {fileID: 2962873400836463984, guid: 73cf5647d3cbe3442a9c7073e86eb0c0,
         type: 3}
       propertyPath: horiziontalSpacing
-      value: 50
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 2962873400836463984, guid: 73cf5647d3cbe3442a9c7073e86eb0c0,
         type: 3}
@@ -2516,12 +2516,12 @@ PrefabInstance:
     - target: {fileID: 3819307120053996108, guid: e361fd93f9eb33e4dad2fd3c85180c68,
         type: 3}
       propertyPath: verticalSpacing
-      value: 50
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 3819307120053996108, guid: e361fd93f9eb33e4dad2fd3c85180c68,
         type: 3}
       propertyPath: horiziontalSpacing
-      value: 70
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3819307120053996109, guid: e361fd93f9eb33e4dad2fd3c85180c68,
         type: 3}
