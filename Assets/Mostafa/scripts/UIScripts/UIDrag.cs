@@ -9,6 +9,8 @@ public class UIDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEn
     public Canvas canvas;
     public UnityEvent onRelease;
 
+    public bool dragEnabled = true;
+
     public float scaleFactor;
 
     private RectTransform rectTransform;
@@ -17,6 +19,7 @@ public class UIDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEn
 
     void Awake()
     {
+        if (!dragEnabled) return;
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
         canvas = FindObjectOfType<Canvas>();
@@ -24,17 +27,20 @@ public class UIDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEn
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (!dragEnabled) return;
         canvasGroup.blocksRaycasts = false;
         Debug.Log("on begin drag");
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (!dragEnabled) return;
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (!dragEnabled) return;
         canvasGroup.blocksRaycasts = true;
         if (onRelease != null) onRelease.Invoke();
         Debug.Log("on end drag");
@@ -42,12 +48,14 @@ public class UIDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEn
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (!dragEnabled) return;
         rectTransform.localScale *= scaleFactor;
         Debug.Log("on pointer down");
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (!dragEnabled) return;
         rectTransform.localScale = originalScale;
     }
 }

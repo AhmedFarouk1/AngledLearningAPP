@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Events;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class LetterAnimationSound : MonoBehaviour
 {
@@ -63,6 +64,7 @@ public class LetterAnimationSound : MonoBehaviour
             tmpLetterGO.GetComponent<UILetter>().AssignLetter(word[i].ToString());
             tmpPosition.x += i * horiziontalSpacing;
             tmpLetterGO.transform.position = tmpPosition;
+            tmpLetterGO.GetComponent<UIDrag>().dragEnabled = false;
         }
     }
 
