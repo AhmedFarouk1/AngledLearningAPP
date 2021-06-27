@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.Audio;
 
 public class Stage2 : MonoBehaviour
 {
@@ -22,9 +23,9 @@ public class Stage2 : MonoBehaviour
     public Button button_stage_3;
 
     public float tweenDuration;
-     
+
     private int currentFruitIndex = 0;
-    
+
     bool locked = false; // if true locks actions related to stage 2
 
     public string[] WordsToBeAssignedToPlate;
@@ -54,7 +55,7 @@ public class Stage2 : MonoBehaviour
         TweenFruitsBackToTable();
         WordTobeAssignedIndex++;
 
-        for(int i = 0; i < fruitTransforms.Length; i++)
+        for (int i = 0; i < fruitTransforms.Length; i++)
         {
             fruitTransforms[i].GetComponent<Image>().raycastTarget = true;
         }
@@ -97,7 +98,7 @@ public class Stage2 : MonoBehaviour
 
     public void FruitDraggedToPlateCallback()
     {
-        SpeechManager._instance.DisableAllSpeech();
+
         monkey.Joy();
         if (WordTobeAssignedIndex < WordsToBeAssignedToPlate.Length)
         {
@@ -125,7 +126,7 @@ public class Stage2 : MonoBehaviour
         finger.gameObject.SetActive(false);
         for (int i = 0; i < fruitTransforms.Length; i++)
         {
-            fruitTransforms[i].GetComponent<Image>().raycastTarget= false;
+            fruitTransforms[i].GetComponent<Image>().raycastTarget = false;
         }
     }
 }

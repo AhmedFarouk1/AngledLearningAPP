@@ -36,13 +36,13 @@ public class SpeechManager : MonoBehaviour
 
     public void ChangeSpeechBubble(string s)
     {
-        SpeechBubbleGO.SetActive(true);
+        SpeechBubbleGO.gameObject.SetActive(true);
         SpeechBubble.text = s;
     }
 
     public void DisableAllSpeech()
     {
-        subtitle.gameObject.SetActive(false);
+        subtitle.text = "";
         SpeechBubbleGO.SetActive(false);
     }
 }
