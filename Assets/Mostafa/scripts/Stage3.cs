@@ -68,6 +68,7 @@ public class Stage3 : MonoBehaviour
 
     public void wordCompleted()//execute when the kid completes a word
     {
+        SpeechManager._instance.DisableAllSpeech();
         monkey.GetComponent<Animator>().SetBool("gotochair", true);
         monkey.GetComponent<RectTransform>().DOMove(monkeyTablePosition.position, tweenDuration).OnComplete(MoveFruitToPlate);
     }
