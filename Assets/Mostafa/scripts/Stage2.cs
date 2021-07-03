@@ -108,7 +108,7 @@ public class Stage2 : MonoBehaviour
         }
         else
         {
-            Stage2Finish();
+           StartCoroutine(startFinishingStage2());
         }
     }
 
@@ -117,6 +117,14 @@ public class Stage2 : MonoBehaviour
         if (locked) return;
 
         SpeechManager._instance.ChangeSpeechBubble("put the " + plate.word + " INSIDE the bowl");
+        GeneralAudioManager._instance.playStage2FruitInside(plate.word);
+    }
+
+    IEnumerator startFinishingStage2()
+    {
+
+        yield return new WaitUntil(() => GeneralAudioManager._instance.audiosource.isPlaying == false);
+        Stage2Finish();
     }
     public void Stage2Finish()
     {

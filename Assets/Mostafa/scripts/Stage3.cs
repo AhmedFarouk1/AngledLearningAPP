@@ -39,10 +39,6 @@ public class Stage3 : MonoBehaviour
 
     }
 
-    private void Start()
-    {
-
-    }
 
     public void OnStage3BtnClick()
     {
@@ -51,6 +47,8 @@ public class Stage3 : MonoBehaviour
         lettersMiniGame.gameObject.SetActive(true);
         lettersMiniGame.Prepare();
         button_stage_3.gameObject.SetActive(false);
+        SpeechManager._instance.ChangeSpeechBubble("keep the letters of INSIDE in order");
+        GeneralAudioManager._instance.keepInsideOrder();
     }
 
     public void MoveFruitToPlate()
