@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6287037112241732564}
   - component: {fileID: 6287037112241732552}
   - component: {fileID: 976461190740300744}
+  - component: {fileID: 3000604937928612685}
   m_Layer: 5
   m_Name: fruit
   m_TagString: Untagged
@@ -107,6 +108,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  dragEnabled: 1
   scaleFactor: 1
 --- !u!114 &6287037112241732564
 MonoBehaviour:
@@ -231,3 +233,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3000604937928612685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6287037112241732566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e0f3eebe8c5a947a405c37b88ea142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inside: {fileID: 0}
+  outside: {fileID: 0}

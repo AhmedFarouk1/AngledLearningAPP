@@ -50,6 +50,11 @@ public class Monkey : MonoBehaviour
         animator.SetBool("inside", true);
     }
 
+    public void Outside()
+    {
+        animator.SetBool("outside", true);//needs to be done
+    }
+
     public void stage2Speak()
     {
         Stage2._instance.Speak();

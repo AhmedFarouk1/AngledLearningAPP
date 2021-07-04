@@ -96,4 +96,9 @@ public class LetterAnimationSound : MonoBehaviour
     {
         Inside_Split.Play();
     }
+
+    public void PlaySoundSplitOutside()
+    {
+        Outside_Split.Play();
+    }
 }
