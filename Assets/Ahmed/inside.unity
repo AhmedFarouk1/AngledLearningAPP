@@ -1022,6 +1022,7 @@ MonoBehaviour:
   - {fileID: 542872731}
   plate: {fileID: 1765334209}
   MonkeyHand: {fileID: 1104893946}
+  word: INSIDE
   monkey: {fileID: 99669145}
   button_stage_1: {fileID: 97565485}
   button_stage_2: {fileID: 1041352909}
@@ -1378,6 +1379,11 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3000604937928612685, guid: b386e6648fe57ed4bad6b6811f2bad45,
+        type: 3}
+      propertyPath: inside
+      value: 
+      objectReference: {fileID: 8300000, guid: 86b80b05b9dfcda4284408c08aaf2759, type: 3}
     - target: {fileID: 6287037112241732554, guid: b386e6648fe57ed4bad6b6811f2bad45,
         type: 3}
       propertyPath: m_Sprite
@@ -2823,6 +2829,11 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3000604937928612685, guid: b386e6648fe57ed4bad6b6811f2bad45,
+        type: 3}
+      propertyPath: inside
+      value: 
+      objectReference: {fileID: 8300000, guid: b0ee85acfba260e41b53a87ed4a3248d, type: 3}
     - target: {fileID: 6287037112241732554, guid: b386e6648fe57ed4bad6b6811f2bad45,
         type: 3}
       propertyPath: m_Sprite
@@ -3826,6 +3837,11 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3000604937928612685, guid: b386e6648fe57ed4bad6b6811f2bad45,
+        type: 3}
+      propertyPath: inside
+      value: 
+      objectReference: {fileID: 8300000, guid: cb045f1f8adb5794fb33053a5a57e70f, type: 3}
     - target: {fileID: 6287037112241732554, guid: b386e6648fe57ed4bad6b6811f2bad45,
         type: 3}
       propertyPath: m_Sprite
