@@ -30,9 +30,20 @@ public class UIPlate : MonoBehaviour, IDropHandler
 
                 if (dragableObjectUI.objectText == word)
                 {
-                    GeneralAudioManager._instance.audiosource.clip = dragableObjectUI.GetComponent<AudioSource>().clip;//???? :(
+
+                    if (Stage2._instance.word == "INSIDE")
+                    {
+                        SpeechManager._instance.ChangeSpeechBubble(dragableObjectUI.GetComponent<RectTransform>().GetComponent<DraggableObjectUI>().objectText + " is INSIDE the bowl");
+                        GeneralAudioManager._instance.audiosource.clip = dragableObjectUI.GetComponent<AudioClips>().inside;//???? :(
+
+                    }
+                    else if (Stage2._instance.word == "OUTSIDE")
+                    {
+                        SpeechManager._instance.ChangeSpeechBubble(dragableObjectUI.GetComponent<RectTransform>().GetComponent<DraggableObjectUI>().objectText + " is OUTSIDE the bowl");
+                        GeneralAudioManager._instance.audiosource.clip = dragableObjectUI.GetComponent<AudioClips>().outside;//???? :(
+                    }
                     GeneralAudioManager._instance.audiosource.Play();
-                    SpeechManager._instance.ChangeSpeechBubble(dragableObjectUI.GetComponent<RectTransform>().GetComponent<DraggableObjectUI>().objectText + " is INSIDE the bowl");
+
                     Stage2._instance.FruitDraggedToPlateCallback();
                     dragableObjectUI.originalPosition = fruitPositions[currentIndex].position;
                     dragableObjectUI.GetComponent<Image>().raycastTarget = false;

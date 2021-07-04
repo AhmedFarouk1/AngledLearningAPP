@@ -889,6 +889,7 @@ MonoBehaviour:
   button_stage_1: {fileID: 97565485}
   button_stage_2: {fileID: 1041352909}
   button_stage_3: {fileID: 1193885835}
+  word: OUTSIDE
   tweenDuration: 0.3
   WordsToBeAssignedToPlate:
   - Apple
@@ -1599,6 +1600,7 @@ MonoBehaviour:
   monkeyTablePosition: {fileID: 239627082}
   monkeyChairPosition: {fileID: 1918781168}
   lettersMiniGame: {fileID: 1007825202}
+  word: OUTSIDE
   plate: {fileID: 1765334209}
   monkey: {fileID: 99669145}
   button_stage_3: {fileID: 1193885835}
@@ -1951,9 +1953,15 @@ MonoBehaviour:
   - {fileID: 1430570124151293979, guid: ae68bf22d4bd04843bcea397356258a1, type: 3}
   - {fileID: 1430570124151293979, guid: d342eba852bbf53428be912988ea9dee, type: 3}
   - {fileID: 1430570124151293979, guid: 796e671298582c14ea4ddafbd9f46c8f, type: 3}
-  outsidefruitaudios: []
+  outsidefruitaudios:
+  - {fileID: 1430570124151293979, guid: 8902b7a95b8abad4aaa888f9bb80f3c3, type: 3}
+  - {fileID: 1430570124151293979, guid: de74964d16b908445bfe2ce63c36c166, type: 3}
+  - {fileID: 1430570124151293979, guid: 2137d6d4173d871439487b06e7d9429d, type: 3}
   insideOrder: {fileID: 8300000, guid: 4ed0c3694430f0b469fd4c0f784b7939, type: 3}
   outsideOrder: {fileID: 8300000, guid: 6c5bdacb8f9a5ac438581a2c9bdd4ac4, type: 3}
+  congrat_inside_audio: {fileID: 0}
+  congrat_outside_audio: {fileID: 8300000, guid: 97624af667f3d114aabb1e262a38270c,
+    type: 3}
   audiosource: {fileID: 0}
 --- !u!82 &765231008
 AudioSource:
@@ -2849,6 +2857,11 @@ PrefabInstance:
       propertyPath: inside
       value: 
       objectReference: {fileID: 8300000, guid: b0ee85acfba260e41b53a87ed4a3248d, type: 3}
+    - target: {fileID: 3000604937928612685, guid: b386e6648fe57ed4bad6b6811f2bad45,
+        type: 3}
+      propertyPath: outside
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cf36190d90bc3e4d94e8fc1f4ba3a7a, type: 3}
     - target: {fileID: 6287037112241732554, guid: b386e6648fe57ed4bad6b6811f2bad45,
         type: 3}
       propertyPath: m_Sprite

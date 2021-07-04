@@ -10,7 +10,11 @@ public class GeneralAudioManager : MonoBehaviour
 
     public AudioClip insideOrder;
     public AudioClip outsideOrder;
-    
+
+
+    public AudioClip congrat_inside_audio;
+    public AudioClip congrat_outside_audio;
+
     public AudioSource audiosource;
 
     public static GeneralAudioManager _instance;
@@ -51,6 +55,7 @@ public class GeneralAudioManager : MonoBehaviour
     {
         fruit_name = fruit_name.ToLower();
         FruitAudio fruitAudio = insidefruitaudios.Find(audio => audio.fruit_name == fruit_name);
+
         if (fruitAudio != null)
         {
             audiosource.clip = fruitAudio.sound;
@@ -67,6 +72,18 @@ public class GeneralAudioManager : MonoBehaviour
             audiosource.clip = fruitAudio.sound;
             audiosource.Play();
         }
+    }
+
+    public void congratsInside()
+    {
+        audiosource.clip = congrat_inside_audio;
+        audiosource.Play();
+    }
+
+    public void congratsOutside()
+    {
+        audiosource.clip = congrat_outside_audio;
+        audiosource.Play();
     }
 
 }

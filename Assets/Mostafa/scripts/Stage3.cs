@@ -15,6 +15,8 @@ public class Stage3 : MonoBehaviour
 
     public UILettersMiniGame lettersMiniGame;
 
+    public string word;
+
     public UIPlate plate;
     public Monkey monkey;
     public Button button_stage_3;
@@ -47,23 +49,35 @@ public class Stage3 : MonoBehaviour
         lettersMiniGame.gameObject.SetActive(true);
         lettersMiniGame.Prepare();
         button_stage_3.gameObject.SetActive(false);
-        SpeechManager._instance.ChangeSpeechBubble("keep the letters of INSIDE in order");
-        GeneralAudioManager._instance.keepInsideOrder();
+
+        if (word == "INSIDE")
+        {
+            SpeechManager._instance.ChangeSpeechBubble("keep the letters of INSIDE in order");
+            GeneralAudioManager._instance.keepInsideOrder();
+        }else if(word == "OUTSIDE")
+        {
+            SpeechManager._instance.ChangeSpeechBubble("keep the letters of OUTSIDE in order");
+            GeneralAudioManager._instance.keepOutsideOrder();
+        }
     }
 
     public void MoveFruitToPlate()
     {
         monkey.FlipMonkey();
-        monkey.Inside();
+        if (word == "INSIDE")
+        {
+            monkey.Inside();
+        }
+        else if (word == "OUTSIDE")
+        {
+            monkey.Outside();
+        }
+
         if (currentFruitIndex < fruitTransforms.Length)
         {
             fruitTransforms[currentFruitIndex].DOMove(plate.fruitPositions[currentFruitIndex].position, tweenDuration).OnComplete(restart);//start tweening letter of the word INSIDE
             currentFruitIndex++;
         }
-
-        
-       
-
     }
 
     public void wordCompleted()//execute when the kid completes a word
@@ -92,7 +106,14 @@ public class Stage3 : MonoBehaviour
         if (locked) return;
         locked = true;
 
-        SpeechManager._instance.ChangeSubtitle("Congratulations!!! you've learned INSIDE!");
-        GetComponent<AudioSource>().Play();
+        if (word == "INSIDE")
+        {
+            SpeechManager._instance.ChangeSubtitle("Congratulations!!! you've learned INSIDE!");
+            GeneralAudioManager._instance.congratsInside();
+        }else if (word == "OUTSIDE")
+        {
+            SpeechManager._instance.ChangeSubtitle("Congratulations!!! you've learned OUTSIDE!");
+            GeneralAudioManager._instance.congratsOutside();
+        }
     }
 }

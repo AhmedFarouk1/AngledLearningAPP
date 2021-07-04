@@ -22,6 +22,8 @@ public class Stage2 : MonoBehaviour
     public Button button_stage_2;
     public Button button_stage_3;
 
+    public string word;
+
     public float tweenDuration;
 
     private int currentFruitIndex = 0;
@@ -108,16 +110,24 @@ public class Stage2 : MonoBehaviour
         }
         else
         {
-           StartCoroutine(startFinishingStage2());
+            StartCoroutine(startFinishingStage2());
         }
     }
 
     public void Speak()
     {
         if (locked) return;
+        if (word == "INSIDE")
+        {
+            SpeechManager._instance.ChangeSpeechBubble("put the " + plate.word + " INSIDE the bowl");
+            GeneralAudioManager._instance.playStage2FruitInside(plate.word);
+        }
+        else if (word == "OUTSIDE")
+        {
+            SpeechManager._instance.ChangeSpeechBubble("put the " + plate.word + " OUTSIDE the bowl");
+            GeneralAudioManager._instance.playStage2FruitOutside(plate.word);
+        }
 
-        SpeechManager._instance.ChangeSpeechBubble("put the " + plate.word + " INSIDE the bowl");
-        GeneralAudioManager._instance.playStage2FruitInside(plate.word);
     }
 
     IEnumerator startFinishingStage2()

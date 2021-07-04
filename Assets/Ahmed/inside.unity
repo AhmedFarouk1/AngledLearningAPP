@@ -889,11 +889,12 @@ MonoBehaviour:
   button_stage_1: {fileID: 97565485}
   button_stage_2: {fileID: 1041352909}
   button_stage_3: {fileID: 1193885835}
+  word: INSIDE
   tweenDuration: 0.3
   WordsToBeAssignedToPlate:
-  - Apple
-  - Banana
   - Mango
+  - Banana
+  - Apple
 --- !u!1 &236437445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,6 +1595,7 @@ MonoBehaviour:
   monkeyTablePosition: {fileID: 239627082}
   monkeyChairPosition: {fileID: 1918781168}
   lettersMiniGame: {fileID: 1007825202}
+  word: INSIDE
   plate: {fileID: 1765334209}
   monkey: {fileID: 99669145}
   button_stage_3: {fileID: 1193885835}
@@ -1943,12 +1945,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insidefruitaudios:
-  - {fileID: 1430570124151293979, guid: ae68bf22d4bd04843bcea397356258a1, type: 3}
+  - {fileID: 1430570124151293979, guid: 1bde5c586cc4cf744b64da7cb1e9611a, type: 3}
   - {fileID: 1430570124151293979, guid: d342eba852bbf53428be912988ea9dee, type: 3}
   - {fileID: 1430570124151293979, guid: 796e671298582c14ea4ddafbd9f46c8f, type: 3}
   outsidefruitaudios: []
   insideOrder: {fileID: 8300000, guid: 4ed0c3694430f0b469fd4c0f784b7939, type: 3}
   outsideOrder: {fileID: 8300000, guid: 6c5bdacb8f9a5ac438581a2c9bdd4ac4, type: 3}
+  congrat_inside_audio: {fileID: 8300000, guid: 8081f6bc8a5e4784cb853f21476684ac,
+    type: 3}
+  congrat_outside_audio: {fileID: 0}
   audiosource: {fileID: 0}
 --- !u!82 &765231008
 AudioSource:
@@ -3842,6 +3847,11 @@ PrefabInstance:
       propertyPath: inside
       value: 
       objectReference: {fileID: 8300000, guid: cb045f1f8adb5794fb33053a5a57e70f, type: 3}
+    - target: {fileID: 3000604937928612685, guid: b386e6648fe57ed4bad6b6811f2bad45,
+        type: 3}
+      propertyPath: outside
+      value: 
+      objectReference: {fileID: 8300000, guid: 2bec70865042c88429dd3db31f84f4c4, type: 3}
     - target: {fileID: 6287037112241732554, guid: b386e6648fe57ed4bad6b6811f2bad45,
         type: 3}
       propertyPath: m_Sprite
