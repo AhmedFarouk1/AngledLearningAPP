@@ -71,6 +71,7 @@ public class Stage1 : MonoBehaviour
                     Debug.Log("in");
                     break;
                 case "OUTSIDE":
+                    monkey.Outside();
                     break;
             }
 

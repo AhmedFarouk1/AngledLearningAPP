@@ -67,6 +67,7 @@ public class Monkey : MonoBehaviour
         animator.SetBool("jump", false);
         animator.SetBool("inside", false);
         animator.SetBool("joy", false);
+        animator.SetBool("outside", false);
 
     }
 

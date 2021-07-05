@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UILettersMiniGame : MonoBehaviour
 {
     public string word;
-    private string collected_word = "";
+    private int num_of_collected_letters = 0;
     public GameObject letterPrefab;
     public GameObject letterContainerPrefab;
 
@@ -19,7 +19,7 @@ public class UILettersMiniGame : MonoBehaviour
     [ContextMenu("prepare")]
     public void Prepare()
     {
-        collected_word = "";
+        num_of_collected_letters = 0;
         rectTransform = GetComponent<RectTransform>();
         //generate containers
         for (int i = 0; i < word.Length; i++)
@@ -65,9 +65,9 @@ public class UILettersMiniGame : MonoBehaviour
 
     public void onCatchLetter(string ch)
     {
-        collected_word += ch;
+        num_of_collected_letters++;
         LetterAudioManager._instance.playLetter(ch);
-        if(collected_word == word)
+        if(num_of_collected_letters == word.Length)
         {
             Debug.Log("done");
             Stage3._instance.wordCompleted();
