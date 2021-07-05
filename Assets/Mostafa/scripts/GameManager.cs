@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,6 +32,11 @@ public class GameManager : MonoBehaviour
     {
         Stage2._instance.TweenFruitsBackToTable();
         lettersMiniGame.gameObject.SetActive(true);
+    }
+
+    public void LoadOutsideScene()
+    {
+        SceneManager.LoadScene("outside", LoadSceneMode.Single);
     }
     
 }

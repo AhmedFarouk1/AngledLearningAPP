@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class Stage3 : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class Stage3 : MonoBehaviour
 
     public float tweenDuration;
     private int currentFruitIndex = 0;
+
+    public UnityEvent onStage3Finish;
 
     bool locked = false; // if true locks all actions related to stage 1
 
@@ -110,10 +113,17 @@ public class Stage3 : MonoBehaviour
         {
             SpeechManager._instance.ChangeSubtitle("Congratulations!!! you've learned INSIDE!");
             GeneralAudioManager._instance.congratsInside();
+            Invoke("shiftSceneToOutside", 3);
         }else if (word == "OUTSIDE")
         {
             SpeechManager._instance.ChangeSubtitle("Congratulations!!! you've learned OUTSIDE!");
             GeneralAudioManager._instance.congratsOutside();
         }
+
+    }
+
+    void shiftSceneToOutside()
+    {
+        GameManager._instance.LoadOutsideScene();
     }
 }
