@@ -2746,7 +2746,7 @@ PrefabInstance:
     - target: {fileID: 2962873400863904853, guid: 73cf5647d3cbe3442a9c7073e86eb0c0,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1207
+      value: 1108
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73cf5647d3cbe3442a9c7073e86eb0c0, type: 3}
@@ -4951,7 +4951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 807, y: -168}
+  m_AnchoredPosition: {x: 753, y: -180}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1918781169
